@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@theme {
+  --color-cream: #F5F2EA; --color-sand: #EAE4D8; --color-ink: #1F2A24;
+  --color-mute: #6a5a4f; --color-line: #d8d0c1; --color-terra: #B5573A;
+  --font-serif: "Newsreader", Georgia, serif; --font-sans: "DM Sans", system-ui, sans-serif;
+}
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; color-scheme: light; }
+  body { @apply bg-cream text-ink font-sans leading-relaxed; }
+  h1, h2, h3 { @apply font-serif font-light leading-[1.05] tracking-tight; }
+  :focus-visible { outline: 2px solid var(--color-terra); outline-offset: 3px; }
+}
+@keyframes up { from { opacity: 0; transform: translateY(18px); } }
+.up { animation: up .9s cubic-bezier(.2,.7,.2,1) both; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .up { animation: none; } * { transition: none !important; } }
