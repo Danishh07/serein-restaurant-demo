@@ -1,4 +1,3 @@
-import hero from './assets/hero.jpg'
 import room from './assets/intro-room.jpg'
 import pumpkin from './assets/dish-pumpkin.jpg'
 import hake from './assets/dish-hake.jpg'
@@ -12,7 +11,7 @@ import g4 from './assets/gallery-4.jpg'
 import g5 from './assets/gallery-5.jpg'
 import g6 from './assets/gallery-6.jpg'
 
-export const img = { hero, room, chef, pd }
+export const img = {room, chef, pd }
 export const hours = ['Tuesday–Saturday · Dinner from 17:30', 'Friday & Saturday · Lunch 12:00–14:30']
 export const dishes = [
   { img: pumpkin, alt: 'Roast Delica pumpkin with whipped ricotta, pumpkin seeds and sage on a green platter', course: 'To start', name: 'Roast Delica pumpkin', price: '£19', desc: 'Brown butter, whipped ricotta, toasted pumpkin seeds and sage.', tags: ['V', 'GF'] },

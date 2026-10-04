@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Booking from './Booking'
 import { Btn, BtnLink, S, Eyebrow, H2, Cap } from './ui'
 import { img, hours, dishes, suppliers, reviews, gallery } from './data'
@@ -5,7 +6,17 @@ import { img, hours, dishes, suppliers, reviews, gallery } from './data'
 export function Hero({ onReserve }) {
   return (
     <section id="hero" className="relative flex min-h-[82vh] items-end overflow-hidden bg-[#151b17] text-cream md:min-h-[88vh]">
-      <img src={img.hero} alt="Serein's dining room at dinner: a waiter pours wine for a couple, the open kitchen glowing behind" fetchPriority="high" className="absolute inset-0 size-full object-cover object-[78%_50%] md:object-[68%_50%]" />
+      <img
+        src="/hero-1800.webp"
+        srcSet="/hero-800.webp 800w, /hero-1800.webp 1800w"
+        sizes="100vw"
+        width="1800"
+        height="930"
+        alt="Serein's dining room at dinner: a waiter pours wine for a couple, the open kitchen glowing behind"
+        fetchPriority="high"
+        decoding="async"
+        className="absolute inset-0 size-full object-cover object-[78%_50%] md:object-[68%_50%]"
+      />
       <div className="absolute inset-0 bg-gradient-to-t from-[#0e1410]/90 via-[#0e1410]/45 to-[#0e1410]/30 md:bg-gradient-to-r md:from-[#0e1410]/85 md:via-[#0e1410]/50 md:to-[#0e1410]/10" />
       <div className="relative z-[2] mx-auto w-full max-w-[1240px] px-5 pb-8 pt-28 md:px-12 md:pb-14 lg:px-16">
         <p className="up mb-3.5 text-[15px]">Modern British, Marylebone</p>
@@ -138,6 +149,7 @@ export function Gallery() {
 }
 
 const lbl = { font: '400 13px "DM Sans",system-ui', fill: '#6a5a4f', paintOrder: 'stroke', stroke: '#F5F2EA', strokeWidth: 5 }
+
 export function Contact() {
   return (
     <S id="contact" className="bg-sand">
@@ -164,7 +176,6 @@ export function Contact() {
   )
 }
 
-import { useState } from 'react'
 export function Footer() {
   const [m, setM] = useState('')
   return (
